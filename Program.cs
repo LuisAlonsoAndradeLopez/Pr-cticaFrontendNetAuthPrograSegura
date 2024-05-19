@@ -34,7 +34,8 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     .AddCookie(options =>
     {
         options.Cookie.Name = ".frontendnet";
-        options.AccessDeniedPath = "/Home/AccessDenied"; options.LoginPath = "/Auth";
+        options.AccessDeniedPath = "/Home/AccessDenied";
+        options.LoginPath = "/Auth";
         options.SlidingExpiration = true;
         options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
     });

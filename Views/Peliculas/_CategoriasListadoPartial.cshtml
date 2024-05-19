@@ -2,7 +2,7 @@
 
 <div class="row small mb-3">
     <div class="col">
-        <a class="text-decoration-none" asp-action="Categorias Agregar" asp-route-id='@ViewData["PeliculaId"]'
+        <a class="text-decoration-none" asp-action="CategoriasAgregar" asp-route-id='@ViewData["PeliculaId"]'
             title="Crear nuevo">Agregar</a>
     </div>
     <div class="col text-end">
@@ -33,12 +33,12 @@
                             @Html.DisplayFor(modelItem => item.CategoriaId)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item. Nombre)
+                            @Html.DisplayFor(modelItem => item.Nombre)
                         </td>
                         <td width="1">
+                            <a class="text-decoration-none small text-uppercase" asp-action="CategoriasRemover"
+                                asp-route-id='@ViewData["PeliculaId"]' asp-route-categoriaid="@item.CategoriaId">Eliminar</a>
                         </td>
-                        <a class="text-decoration-none small text-uppercase" asp-action="Categorias Remover"
-                            asp-route-id='@ViewData [ "PeliculaId"]' asp-route-categoriaid="@item. Categoria Id">Eliminar</a>
                     </tr>
                 }
             </tbody>

@@ -5,16 +5,17 @@
 }
 
 @section Scripts {
-    <partial name="_ValidationScripts Partial" />
+    <partial name="_ValidationScriptsPartial" />
 }
 
 <nav aria-label="breadcrumb">
-    <li class="breadcrumb-item"> <a class="text-decoration-none" title="Regresar al listado" <ol
-            class="breadcrumb small">
-            asp-action "Index">Listado</a></li>
-    <li class="breadcrumb-item"> <a class="text-decoration-none" title="Regresar a las categorias"
-            asp-action="Categorias" asp-route-id="@Model.Pelicula?.PeliculaId">Categorias</a></li>
-    <li class="breadcrumb-item active" aria-current="page">@ViewData["SubTitle"]</li>
+    <ol>
+        <li class="breadcrumb-item"> <a class="text-decoration-none" title="Regresar al listado"
+                class="breadcrumb small">
+                asp-action "Index">Listado</a></li>
+        <li class="breadcrumb-item"> <a class="text-decoration-none" title="Regresar a las categorias"
+                asp-action="Categorias" asp-route-id="@Model.Pelicula?.PeliculaId">Categorias</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@ViewData["SubTitle"]</li>
     </ol>
 </nav>
 
@@ -26,7 +27,7 @@
     <div class="card mt-3">
         <div class="card-body small">
             <div class="form-floating mb-3">
-                <select class="form-select" asp-for="CategoriaId" class="form-control" asp-items="ViewBag. Categoria">
+                <select class="form-select" asp-for="CategoriaId" class="form-control" asp-items="ViewBag.Categoria">
                     <option value="">Seleccione una categoría</option>
                 </select>
                 <label asp-for="CategoriaId" class="control-label"> </label>
